@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Opening TubeMind...</title>
+    <script>
+        setTimeout(function() {
+            var targetURL = "https://tubemind.live";
+            
+            if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) {
+                window.location.href = "x-web-search://tubemind.live";
+            } else if (navigator.userAgent.includes('Android')) {
+                window.location.href = "intent://tubemind.live#Intent;scheme=https;package=com.android.chrome;end";
+            } else {
+                window.open(targetURL, "_blank");
+            }
+            // Fallback redirect
+            setTimeout(() => window.location.href = targetURL, 2000);
+        }, 1000);
+    </script>
+</head>
+<body style="text-align:center; padding:50px; font-family:Arial; background:#000; color:#fff;">
+    <h2>🚀 Opening TubeMind in Browser...</h2>
+    <p>AI-Powered Learning from YouTube videos</p>
+    <p><a href="https://tubemind.live" style="color:#ff6b6b;">Click here if not redirected</a></p>
+</body>
+</html>
